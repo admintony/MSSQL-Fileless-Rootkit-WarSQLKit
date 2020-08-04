@@ -51,7 +51,7 @@ public partial class StoredProcedures
                     SqlContext.Pipe.Send("Creating Kumpir File");
                     var createKumpir = new CreateKumpir();
                     createKumpir.KumpirBytes();
-                    SqlContext.Pipe.Send("Dosya Oluþturuldu");
+                    SqlContext.Pipe.Send("Dosya OluÃ¾turuldu");
                 }
                 var newCmd = cmd.Replace("/RunSystemPriv", "");
                 var newCmdReplace = newCmd.Remove(newCmd.Length - 1);
@@ -60,7 +60,7 @@ public partial class StoredProcedures
             }
             catch (Exception e)
             {
-                SqlContext.Pipe.Send("Task hataya düþtü" + e.Message);
+                SqlContext.Pipe.Send("Task hataya " + e.Message);
             }
             finally
             {
